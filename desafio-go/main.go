@@ -12,6 +12,7 @@ func main() {
 	http.HandleFunc("/", msgHandler)
 
 	port := os.Getenv("PORT")
+
 	if port == "" {
 		port = "8080"
 	}
