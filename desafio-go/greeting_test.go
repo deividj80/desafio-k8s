@@ -3,7 +3,7 @@ package main
 import "testing"
 
 func TestGreeting(t *testing.T) {
-
+	//teste
 	result := greeting("Code.education Rocks!")
 
 	if result == "<b>Code.education Rocks!</b>" {
