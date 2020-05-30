@@ -6,8 +6,7 @@ ENV PORT 8080
 COPY ./desafio-go/ /go/src/${APP_NAME}
 WORKDIR /go/src/${APP_NAME}
 
-RUN go get ./
-RUN go build -o ${APP_NAME}
+RUN go build main.go greeting.go
 
 CMD ./${APP_NAME}
 

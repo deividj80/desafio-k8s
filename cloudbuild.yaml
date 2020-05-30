@@ -1,0 +1,6 @@
+
+steps:
+
+  - id: "Running GO TEST"
+    name: 'gcr.io/$PROJECT_ID/docker-compose:1.25.5'
+    args: ['-f','docker-compose.yaml','run','web','go','test','*.go','-v']
