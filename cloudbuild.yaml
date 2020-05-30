@@ -4,3 +4,10 @@ steps:
   - id: "Running GO TEST"
     name: 'gcr.io/$PROJECT_ID/docker-compose:1.25.5'
     args: ['-f','docker-compose.yaml','run','web','go','test','*.go','-v']
+    
+  - id: "Send image Google Container Registry"
+    name: 'gcr.io/cloud-builders/docker'
+    args: ['build','-t','gcr.io/$PROJECT_ID/golang-greeting:latest','.']
+
+images:
+  - 'gcr.io/$PROJECT_ID/golang-greeting:latest'
