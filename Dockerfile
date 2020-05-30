@@ -11,3 +11,5 @@ RUN go build main.go greeting.go
 CMD ./${APP_NAME}
 
 EXPOSE ${PORT}
+
+
