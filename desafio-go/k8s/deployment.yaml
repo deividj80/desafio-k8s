@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-code-education
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-code-education
+  template:
+    metadata:
+      labels:
+        app: go-code-education
+    spec:
+      containers:
+        - name: go
+          image: deividj80/desafio-k8s-go
+          ports:
+            - containerPort: 8080
